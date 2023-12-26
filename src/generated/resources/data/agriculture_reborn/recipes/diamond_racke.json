@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "SSS",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "agriculture_reborn:diamond_racke"
+  },
+  "show_notification": true
+}

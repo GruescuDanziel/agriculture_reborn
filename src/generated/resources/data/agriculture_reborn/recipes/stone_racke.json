@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "pattern": [
+    "SSS",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "agriculture_reborn:stone_racke"
+  },
+  "show_notification": true
+}

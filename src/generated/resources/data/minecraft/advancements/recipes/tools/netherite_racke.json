@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_diamond_racke": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "agriculture_reborn:diamond_racke"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:netherite_racke"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_diamond_racke"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:netherite_racke"
+    ]
+  },
+  "sends_telemetry_event": false
+}

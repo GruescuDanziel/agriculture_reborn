@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "agriculture_reborn:item/wood_racke"
+  }
+}

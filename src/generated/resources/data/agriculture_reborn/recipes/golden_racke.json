@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "SSS",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "agriculture_reborn:golden_racke"
+  },
+  "show_notification": true
+}
