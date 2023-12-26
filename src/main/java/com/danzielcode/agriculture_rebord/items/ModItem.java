@@ -13,7 +13,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItem {
     public static DeferredRegister<Item> MOD_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, AgricultureReborn.MODID);
 
-    public static RegistryObject<Item> scythe = MOD_ITEMS.register("scythe", () -> new Scythe(new Item.Properties().durability(100)));
+    public static RegistryObject<Item> scythe = MOD_ITEMS.register("scythe", () -> new Scythe(new Item.Properties().durability(100), Tiers.IRON));
 
     public static RegistryObject<Item> wood_racke = MOD_ITEMS.register("wood_racke", () -> new Rake(Tiers.WOOD, 10, 1, new Item.Properties().durability(100)));
     public static RegistryObject<Item> stone_racke = MOD_ITEMS.register("stone_racke", () -> new Rake(Tiers.STONE, 10, 1, new Item.Properties().durability(100)));
