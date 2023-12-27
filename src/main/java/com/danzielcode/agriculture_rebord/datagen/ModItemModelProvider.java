@@ -25,6 +25,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItem.diamond_racke);
         simpleItem(ModItem.netherite_racke);
         simpleItem(ModItem.watering_can);
+        heldItem(ModItem.nethrite_scythe);
     }
 
     private ItemModelBuilder heldItem(RegistryObject<Item> item){

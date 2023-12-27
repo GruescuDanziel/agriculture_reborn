@@ -50,13 +50,13 @@ public class Rake extends HoeItem {
 
             try {
                 breakGrass(pLevel, pHitRight.getBlockPos());
-                super.useOn(new UseOnContext(pLevel, player, pHand, itemStack, pHitRight));
+                breakGrass(pLevel, pHitLeft.getBlockPos());
             }catch (Exception e)
             {
                 System.out.println(e);
             }
             try {
-                breakGrass(pLevel, pHitLeft.getBlockPos());
+                super.useOn(new UseOnContext(pLevel, player, pHand, itemStack, pHitRight));
                 super.useOn(new UseOnContext(pLevel, player, pHand, itemStack, pHitLeft));
             }catch (Exception e){
                 System.out.println(e);

@@ -2,6 +2,7 @@ package com.danzielcode.agriculture_rebord.items.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tier;
@@ -36,7 +37,7 @@ public class WateringCan extends Item {
         Block cropBlock = pLevel.getBlockState(clickedPos).getBlock();
         if(cropBlock instanceof BonemealableBlock){
             if (pLevel instanceof ServerLevel)
-                ((BonemealableBlock) cropBlock).performBonemeal((ServerLevel) pLevel, pLevel.random,clickedPos,blockState);
+                ((BonemealableBlock) cropBlock).performBonemeal((ServerLevel) pLevel, RandomSource.create(1),clickedPos,blockState);
         }
     }
 

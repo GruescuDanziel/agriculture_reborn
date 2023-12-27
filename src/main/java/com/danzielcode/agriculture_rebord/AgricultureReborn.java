@@ -1,5 +1,6 @@
 package com.danzielcode.agriculture_rebord;
 
+import com.danzielcode.agriculture_rebord.blocks.ModBlock;
 import com.danzielcode.agriculture_rebord.items.ModItem;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
@@ -27,6 +28,7 @@ public class AgricultureReborn
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModBlock.register(modEventBus);
         ModItem.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
 
