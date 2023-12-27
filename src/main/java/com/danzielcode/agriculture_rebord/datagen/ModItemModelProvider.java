@@ -19,13 +19,18 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItem.scythe);
-        simpleItem(ModItem.wood_racke);
         simpleItem(ModItem.stone_racke);
         simpleItem(ModItem.iron_racke);
         simpleItem(ModItem.golden_racke);
         simpleItem(ModItem.diamond_racke);
         simpleItem(ModItem.netherite_racke);
         simpleItem(ModItem.watering_can);
+    }
+
+    private ItemModelBuilder heldItem(RegistryObject<Item> item){
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(AgricultureReborn.MODID, "item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item){
