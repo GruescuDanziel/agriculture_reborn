@@ -20,6 +20,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS,ModItem.watering_can.get())
+                .pattern("I  ")
+                .pattern("IWI")
+                .pattern("III")
+                .define('I', Items.IRON_INGOT)
+                .define('W', Items.WATER_BUCKET)
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(pRecipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItem.scythe.get())
                 .pattern("III")
                 .pattern("IS ")

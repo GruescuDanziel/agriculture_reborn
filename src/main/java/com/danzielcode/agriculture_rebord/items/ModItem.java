@@ -3,6 +3,7 @@ package com.danzielcode.agriculture_rebord.items;
 import com.danzielcode.agriculture_rebord.AgricultureReborn;
 import com.danzielcode.agriculture_rebord.items.custom.Rake;
 import com.danzielcode.agriculture_rebord.items.custom.Scythe;
+import com.danzielcode.agriculture_rebord.items.custom.WateringCan;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,6 +23,8 @@ public class ModItem {
 
     public static RegistryObject<Item> diamond_racke = MOD_ITEMS.register("diamond_racke", () -> new Rake(Tiers.DIAMOND, 10, 1, new Item.Properties().durability(100)));
     public static RegistryObject<Item> netherite_racke = MOD_ITEMS.register("netherite_racke", () -> new Rake(Tiers.NETHERITE, 10, 1, new Item.Properties().durability(100)));
+
+    public static RegistryObject<Item> watering_can = MOD_ITEMS.register("watering_can", () -> new WateringCan(new Item.Properties(), Tiers.IRON));
     public static void register(IEventBus eventBus){
         MOD_ITEMS.register(eventBus);
     }

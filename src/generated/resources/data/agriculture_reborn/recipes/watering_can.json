@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "pattern": [
+    "I  ",
+    "IWI",
+    "III"
+  ],
+  "result": {
+    "item": "agriculture_reborn:watering_can"
+  },
+  "show_notification": true
+}
