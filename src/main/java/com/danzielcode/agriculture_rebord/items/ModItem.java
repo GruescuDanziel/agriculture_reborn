@@ -16,9 +16,13 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItem {
     public static DeferredRegister<Item> MOD_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, AgricultureReborn.MODID);
 
-    public static RegistryObject<Item> scythe = MOD_ITEMS.register("scythe", () -> new Scythe(new Item.Properties().durability(100), Tiers.IRON));
-    public static RegistryObject<Item> nethrite_scythe = MOD_ITEMS.register("netherite_scythe", () -> new Scythe(new Item.Properties().durability(100), Tiers.NETHERITE));
+    public static RegistryObject<Item> wood_scythe = MOD_ITEMS.register("wood_scythe", () -> new Scythe(new Item.Properties().durability(100), Tiers.WOOD));
+    public static RegistryObject<Item> stone_scythe = MOD_ITEMS.register("stone_scythe", () -> new Scythe(new Item.Properties().durability(100), Tiers.STONE));
+    public static RegistryObject<Item> iron_scythe = MOD_ITEMS.register("iron_scythe", () -> new Scythe(new Item.Properties().durability(100), Tiers.IRON));
 
+    public static RegistryObject<Item> gold_scythe = MOD_ITEMS.register("gold_scythe", () -> new Scythe(new Item.Properties().durability(100), Tiers.GOLD));
+    public static RegistryObject<Item> diamond_scythe = MOD_ITEMS.register("diamond_scythe", () -> new Scythe(new Item.Properties().durability(100), Tiers.DIAMOND));
+    public static RegistryObject<Item> nethrite_scythe = MOD_ITEMS.register("netherite_scythe", () -> new Scythe(new Item.Properties().durability(100), Tiers.NETHERITE));
     public static RegistryObject<Item> wood_racke = MOD_ITEMS.register("wood_racke", () -> new Rake(Tiers.WOOD, 10, 1, new Item.Properties().durability(100)));
     public static RegistryObject<Item> stone_racke = MOD_ITEMS.register("stone_racke", () -> new Rake(Tiers.STONE, 10, 1, new Item.Properties().durability(100)));
     public static RegistryObject<Item> iron_racke = MOD_ITEMS.register("iron_racke", () -> new Rake(Tiers.IRON, 10, 1, new Item.Properties().durability(100)));

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_oak_log": {
+    "has_gold_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:oak_log"
+              "minecraft:gold_ingot"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "agriculture_reborn:wood_racke"
+        "recipe": "agriculture_reborn:gold_scythe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -23,12 +23,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_oak_log"
+      "has_gold_ingot"
     ]
   ],
   "rewards": {
     "recipes": [
-      "agriculture_reborn:wood_racke"
+      "agriculture_reborn:gold_scythe"
     ]
   },
   "sends_telemetry_event": false

@@ -10,12 +10,12 @@
     }
   },
   "pattern": [
-    "M M",
-    " M ",
+    "MMM",
+    "MS ",
     " S "
   ],
   "result": {
-    "item": "agriculture_reborn:golden_racke"
+    "item": "agriculture_reborn:gold_scythe"
   },
   "show_notification": true
 }

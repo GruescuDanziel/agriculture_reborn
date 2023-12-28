@@ -3,19 +3,19 @@
   "category": "equipment",
   "key": {
     "M": {
-      "item": "minecraft:gold_ingot"
+      "item": "minecraft:oak_log"
     },
     "S": {
       "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "M M",
-    " M ",
+    "MMM",
+    "MS ",
     " S "
   ],
   "result": {
-    "item": "agriculture_reborn:golden_racke"
+    "item": "agriculture_reborn:wood_scythe"
   },
   "show_notification": true
 }

@@ -2,13 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "S": {
+    "M": {
       "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "SSS",
-    " S ",
+    "M M",
+    " M ",
     " S "
   ],
   "result": {

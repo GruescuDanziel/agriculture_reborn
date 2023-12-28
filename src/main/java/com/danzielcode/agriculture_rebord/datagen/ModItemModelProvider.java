@@ -18,14 +18,13 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        simpleItem(ModItem.scythe);
         simpleItem(ModItem.stone_racke);
         simpleItem(ModItem.iron_racke);
         simpleItem(ModItem.golden_racke);
         simpleItem(ModItem.diamond_racke);
         simpleItem(ModItem.netherite_racke);
         simpleItem(ModItem.watering_can);
-        heldItem(ModItem.nethrite_scythe);
+        simpleItem(ModItem.tomato);
     }
 
     private ItemModelBuilder heldItem(RegistryObject<Item> item){

@@ -13,6 +13,8 @@ import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.List;
 
+import static com.danzielcode.agriculture_rebord.datagen.utils.CustomTierRecipes.*;
+
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
@@ -30,65 +32,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
                 .save(pRecipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItem.scythe.get())
-                .pattern("III")
-                .pattern("IS ")
-                .pattern(" S ")
-                .define('I', Items.IRON_INGOT)
-                .define('S', Items.STICK)
-                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
-                .save(pRecipeOutput);
+        scythe_recepie(pRecipeOutput,ModItem.wood_scythe.get(), Items.OAK_LOG);
+        scythe_recepie(pRecipeOutput,ModItem.stone_scythe.get(), Items.COBBLESTONE);
+        scythe_recepie(pRecipeOutput,ModItem.iron_scythe.get(), Items.IRON_INGOT);
+        scythe_recepie(pRecipeOutput,ModItem.gold_scythe.get(), Items.GOLD_INGOT);
+        scythe_recepie(pRecipeOutput,ModItem.diamond_scythe.get(), Items.DIAMOND);
 
-        SmithingTransformRecipeBuilder
-                .smithing(
-                        Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                        Ingredient.of(ModItem.diamond_racke.get()),
-                        Ingredient.of(Items.NETHERITE_INGOT),
-                        RecipeCategory.TOOLS,
-                        ModItem.netherite_racke.get())
-                .unlocks(getHasName(ModItem.diamond_racke.get()), has(ModItem.diamond_racke.get()))
-                        .save(pRecipeOutput, "netherite_racke");
+        racke_recipe(pRecipeOutput, ModItem.wood_racke.get(), Items.OAK_LOG);
+        racke_recipe(pRecipeOutput, ModItem.stone_racke.get(), Items.COBBLESTONE);
+        racke_recipe(pRecipeOutput, ModItem.iron_racke.get(), Items.IRON_INGOT);
+        racke_recipe(pRecipeOutput, ModItem.golden_racke.get(), Items.GOLD_INGOT);
+        racke_recipe(pRecipeOutput, ModItem.diamond_racke.get(), Items.DIAMOND);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItem.stone_racke.get())
-                .pattern("SSS")
-                .pattern(" S ")
-                .pattern(" S ")
-                .define('S', Items.COBBLESTONE)
-                .unlockedBy(getHasName(Items.COBBLESTONE), has(Items.COBBLESTONE))
-                .save(pRecipeOutput);
+        netherite_upgrade(pRecipeOutput, ModItem.diamond_scythe.get(), ModItem.nethrite_scythe.get());
+        netherite_upgrade(pRecipeOutput, ModItem.diamond_racke.get(), ModItem.netherite_racke.get());
 
-         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItem.iron_racke.get())
-                .pattern("SSS")
-                .pattern(" S ")
-                .pattern(" S ")
-                .define('S', Items.IRON_INGOT)
-                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
-                .save(pRecipeOutput);
-
-         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItem.diamond_racke.get())
-                .pattern("SSS")
-                .pattern(" S ")
-                .pattern(" S ")
-                .define('S', Items.DIAMOND)
-                .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
-                .save(pRecipeOutput);
-         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItem.golden_racke.get())
-                .pattern("SSS")
-                .pattern(" S ")
-                .pattern(" S ")
-                .define('S', Items.GOLD_INGOT)
-                .unlockedBy(getHasName(Items.GOLD_INGOT), has(Items.GOLD_INGOT))
-                .save(pRecipeOutput);
-
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItem.wood_racke.get())
-                .pattern("SSS")
-                .pattern(" S ")
-                .pattern(" S ")
-                .define('S', Items.STICK)
-                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
-                .save(pRecipeOutput);
-    }
+   }
     protected static void oreSmelting(RecipeOutput pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
         multipleOreSmelting(pRecipeOutput, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_smelting");
     }
@@ -109,6 +68,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             singularOreSmelting(pRecipeOutput, pSerializer, itemlike, pCategory, pResult, pExperience, pCookingTime, pGroup, pSuffix);
         }
     }
+
+
 
     private static void singularOreSmelting(RecipeOutput pRecipeOutput, RecipeSerializer<? extends AbstractCookingRecipe> pSerializer,ItemLike pIngredient, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pSuffix){
         SimpleCookingRecipeBuilder.generic(

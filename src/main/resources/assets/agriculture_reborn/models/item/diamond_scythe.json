@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "agriculture_reborn:item/diamond_scythe"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [0,-90,-45],
+      "translation": [0,7,2]
+    }
+  }
+}

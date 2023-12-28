@@ -3,19 +3,19 @@
   "category": "equipment",
   "key": {
     "M": {
-      "item": "minecraft:gold_ingot"
+      "item": "minecraft:cobblestone"
     },
     "S": {
       "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "M M",
-    " M ",
+    "MMM",
+    "MS ",
     " S "
   ],
   "result": {
-    "item": "agriculture_reborn:golden_racke"
+    "item": "agriculture_reborn:stone_scythe"
   },
   "show_notification": true
 }
