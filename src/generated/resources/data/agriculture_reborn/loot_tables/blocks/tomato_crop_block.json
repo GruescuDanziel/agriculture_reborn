@@ -27,7 +27,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "agriculture_reborn:tomato_seeds"
+              "name": "minecraft:air"
             }
           ]
         }
@@ -59,7 +59,7 @@
               }
             }
           ],
-          "name": "agriculture_reborn:tomato_seeds"
+          "name": "minecraft:air"
         }
       ],
       "rolls": 1.0

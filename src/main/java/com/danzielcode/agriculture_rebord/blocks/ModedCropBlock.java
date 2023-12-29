@@ -1,26 +1,27 @@
-package com.danzielcode.agriculture_rebord.blocks.custom;
+package com.danzielcode.agriculture_rebord.blocks;
 
-import com.danzielcode.agriculture_rebord.items.ModItem;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
-public class TommatoCropBlock extends CropBlock {
+public class ModedCropBlock extends CropBlock {
+    public static int max_age;
+    public static IntegerProperty age;
+    public static ItemLike seedItem;
 
-    public static int max_age = 5;
-    public static IntegerProperty age = BlockStateProperties.AGE_5;
-
-    public TommatoCropBlock(Properties pProperties) {
+    public ModedCropBlock(Properties pProperties, int max_age, IntegerProperty age, ItemLike seedItem) {
         super(pProperties);
+        ModedCropBlock.max_age = max_age;
+        ModedCropBlock.age = age;
     }
+
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ModItem.tomato_seed_bag.get();
+        return this.seedItem;
     }
 
     @Override

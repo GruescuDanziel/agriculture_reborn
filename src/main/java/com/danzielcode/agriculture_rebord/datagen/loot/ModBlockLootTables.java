@@ -10,7 +10,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
@@ -29,7 +28,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 createCropDrops(
                         ModBlock.tomato_crop_block.get(),
                         ModItem.tomato.get(),
-                        ModItem.tomato_seeds.get(),
+                        Items.AIR,
                         makeCondition(
                                 ModBlock.tomato_crop_block.get(),
                                 StatePropertiesPredicate
@@ -38,19 +37,21 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                         .hasProperty(
                                                 TommatoCropBlock.age,
                                                 5)
-                                )));
+                        )));
     }
-    protected LootTable.Builder multipleOreDorp(Block pBlock, Item pItem, int min , int max ) {
+
+    protected LootTable.Builder multipleOreDorp(Block pBlock, Item pItem, int min, int max) {
         return createSilkTouchDispatchTable(pBlock,
                 this.applyExplosionDecay(pBlock, LootItem.lootTableItem(Items.LAPIS_LAZULI)
                         .apply(SetItemCountFunction.setCount(UniformGenerator.between(min, max)))
                         .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
     }
+
     @Override
     protected void generate() {
     }
 
-    protected LootItemCondition.Builder makeCondition(Block blockState, StatePropertiesPredicate.Builder builder){
+    protected LootItemCondition.Builder makeCondition(Block blockState, StatePropertiesPredicate.Builder builder) {
         return LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(blockState)
                 .setProperties(builder);

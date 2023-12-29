@@ -4,9 +4,9 @@ import com.danzielcode.agriculture_rebord.AgricultureReborn;
 import com.danzielcode.agriculture_rebord.blocks.ModBlock;
 import com.danzielcode.agriculture_rebord.items.custom.Rake;
 import com.danzielcode.agriculture_rebord.items.custom.Scythe;
+import com.danzielcode.agriculture_rebord.items.custom.TomatoBag;
 import com.danzielcode.agriculture_rebord.items.custom.WateringCan;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -33,11 +33,12 @@ public class ModItem {
 
     public static RegistryObject<Item> watering_can = MOD_ITEMS.register("watering_can", () -> new WateringCan(new Item.Properties(), Tiers.IRON));
 
-    public static RegistryObject<Item> tomato_seeds = MOD_ITEMS.register("tomato_seeds",
-            () -> new ItemNameBlockItem(ModBlock.tomato_crop_block.get(), new Item.Properties()));
+    public static RegistryObject<Item> tomato_seed_bag = MOD_ITEMS.register("tomato_seed_bag",
+            () -> new TomatoBag(ModBlock.tomato_crop_block.get(), new Item.Properties(), Tiers.DIAMOND));
 
     public static RegistryObject<Item> tomato = MOD_ITEMS.register("tomato", () -> new Item(new Item.Properties()));
-    public static void register(IEventBus eventBus){
+
+    public static void register(IEventBus eventBus) {
         MOD_ITEMS.register(eventBus);
     }
 }

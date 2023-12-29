@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "S": {
+      "item": "agriculture_reborn:tomato"
+    }
+  },
+  "pattern": [
+    "   ",
+    "LSL",
+    "LLL"
+  ],
+  "result": {
+    "item": "agriculture_reborn:tomato_seed_bag"
+  },
+  "show_notification": true
+}
